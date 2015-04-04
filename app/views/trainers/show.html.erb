@@ -9,5 +9,11 @@
 			<li><%= pokemon.name %>, level: <%= pokemon.level %>, health: <%= pokemon.health %> <%= button_to "Damage!", damage_path(id: pokemon), :class => "button small", :method => :patch %></li>
 		<% end %>
 	</ul>
+</div>
 
+<div>
+	<h4>Create Your Own Pokemon</h4>
+	<% if @trainer.id == current_trainer.id %>
+		<%= button_to "Create Pokemon!", new_pokemon_path(id: current_trainer.id), :class => "button medium", :method => :get%>
+	<% end %>
 </div>
