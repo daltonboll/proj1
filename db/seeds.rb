@@ -6,9 +6,12 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# Admin login
+Trainer.create name: "Dalton", email: "daltonboll@gmail.com", password: "password"
+
 # Make Pokemon
 %w(Squirtle Charmander Bulbasaur Pikachu).each do |name|
-  Pokemon.create name: name, level: rand(1..20)
+  Pokemon.create name: name, level: rand(1..20), health: 100
 end
 
 # Make other trainers
